@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./colors";
+
+.col{
+  text-align: center;
+}
+
+.App {
+  background-color: $background;
+  height: 100vh;
+}
