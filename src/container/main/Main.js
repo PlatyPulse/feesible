@@ -11,8 +11,6 @@ export default function Main() {
     const usdRates = useContext(UsdContext)
     const gasContext = useContext(GasContext)
     const customGas = useContext(CustomGasContext)
-    console.log(`gasContext`, gasContext)
-    console.log(`usdRates`, usdRates)
     const marks = {
 
         30: <strong>30 (NGMI)</strong>,

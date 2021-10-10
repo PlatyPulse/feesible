@@ -34,7 +34,6 @@ function App() {
       obj.average = obj.average / 10
       obj.fast = obj.fast / 10
       obj.fastest = obj.fastest / 10
-      console.log(`obj`, obj)
       setGasObj(obj);
       document.title = `Low : ${obj.safeLow} | Avg : ${obj.average} | Fast : ${obj.fast} `;
     })

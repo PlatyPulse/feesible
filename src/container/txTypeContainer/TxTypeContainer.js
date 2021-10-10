@@ -11,7 +11,6 @@ export default function TxTypeContainer({ name = 'Title', gascost = 21000 }) {
     
     const customGas = useContext(CustomGasContext)
     const gas = useContext(GasContext)
-    console.log(`gas`, gas)
     
     return (
         <div className="tx-type-container">
