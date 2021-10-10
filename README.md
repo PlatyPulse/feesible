@@ -1,4 +1,4 @@
-# Welcom to Feesible
+# Welcome to Feesible
 
 This project is an alpha version of an incoming website that will help you determine how much you'll spend on each type of transaction.
 
