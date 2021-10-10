@@ -1,15 +1,27 @@
 import React, { useContext } from 'react'
+import Slider, { Range } from 'rc-slider';
 import { Container, Row } from 'react-bootstrap'
-import { GasContext, UsdContext } from '../../App'
+import { CustomGasContext, GasContext, UsdContext } from '../../App'
 import Header from '../../components/header/Header'
 import TxTypeContainer from '../txTypeContainer/TxTypeContainer'
 import './Main.scss'
+import 'rc-slider/assets/index.css';
 
 export default function Main() {
     const usdRates = useContext(UsdContext)
     const gasContext = useContext(GasContext)
+    const customGas = useContext(CustomGasContext)
     console.log(`gasContext`, gasContext)
     console.log(`usdRates`, usdRates)
+    const marks = {
+
+        30: <strong>30 (NGMI)</strong>,
+        1000: '1000',
+        2000: '2000',
+        3500: '3500',
+        6000: '6000',
+        10000: <strong> 10 000 Are you that rich ?</strong>
+    };
     return (
         <Container className="main-container">
             {(usdRates && gasContext) && (
@@ -17,13 +29,20 @@ export default function Main() {
                     <div>
                         <Header></Header>
                     </div>
+                    <div className="explanations">
+                        Never get surprised by network fees again ! With feesible you can calculate the cost of your fees for most of DEFI's actions !
+                    </div>
                     <div>
-                        <TxTypeContainer name={"ETH transfer"} gascost={21000}/>
-                        <TxTypeContainer name={"ERC20 transfer"} gascost={85000}/>
-                        <TxTypeContainer name={"Approve contract"}  gascost={60000}/>
-                        <TxTypeContainer name={"Uniswap Swap"}  gascost={200000}/>
-                        <TxTypeContainer name={"Add LP Uniswap"}  gascost={175000}/>
-                        <TxTypeContainer name={"Opensea buy now"}  gascost={350000}/>
+                        <div>Selected Gas : {customGas.customGas}</div>
+                        <Slider min={30} max={10000} marks={marks} included={false} onChange={(a) => customGas.setCustomGas(a)} defaultValue={customGas.customGas} />
+                    </div>
+                    <div>
+                        <TxTypeContainer name={"ETH transfer"} gascost={21000} />
+                        <TxTypeContainer name={"ERC20 transfer"} gascost={85000} />
+                        <TxTypeContainer name={"Approve contract"} gascost={60000} />
+                        <TxTypeContainer name={"Uniswap Swap"} gascost={200000} />
+                        <TxTypeContainer name={"Add LP Uniswap"} gascost={175000} />
+                        <TxTypeContainer name={"Opensea buy now"} gascost={350000} />
                     </div>
                 </Row>
             )}

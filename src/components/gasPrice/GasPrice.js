@@ -3,10 +3,11 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Card from '../card/Card'
 import './GasPrice.scss'
 import { colors } from '../../colors'
-import { UsdContext } from '../../App'
+import { CustomGasContext, UsdContext } from '../../App'
 
 export default function GasPrice({ gasprice = 55, time = 0.5, type = '', gascost = 21000 }) {
     const usdRate = useContext(UsdContext)
+    
 
 
 
@@ -39,26 +40,26 @@ export default function GasPrice({ gasprice = 55, time = 0.5, type = '', gascost
 
     return (
         <div className="gas-price-card">
-            <Card bg={colors.backgroundcardSecondary} noPadding={true} height={120}>
+            <Card  bg={colors.backgroundcardSecondary} noPadding={true} height={120}>
                 <Container >
                     <Row>
                         <Col xs={3} className="bordered-right" style={{ backgroundColor: colorLeft }}>
-                            {type !== 'custom' && (
+                         
 
                                 <div className="gasprice-left">
                                     <h2>{gasprice}</h2>
                                     <span> {'<' + time}</span>
                                 </div>
-                            )}
-                            {type === 'custom' && (
+                            
+                            {/* {type === 'custom' && (
                                 <div className="gasprice-left">
                                     <h1>??</h1>
                                 </div>
-                            )}
+                            )} */}
                         </Col>
                         <Col>
-                            {type !== 'custom' && (
-                                <div>
+                           
+                                <div  className="gasprice-card-title">
                                     <span>{type.toUpperCase()}</span>
                                     <div className="gasprice-right">
                                         <span>{ethCost} ETH</span>
@@ -66,12 +67,12 @@ export default function GasPrice({ gasprice = 55, time = 0.5, type = '', gascost
 
                                     </div>
                                 </div>
-                            )}
+                            {/* 
                             {type === 'custom' && (
                                 <div className="gasprice-right">
                                     Custom gas amount coming soon !
                                 </div>
-                            )}
+                            )} */}
                         </Col>
                     </Row>
                 </Container>
