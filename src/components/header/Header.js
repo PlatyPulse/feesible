@@ -7,7 +7,7 @@ import './Header.scss'
 export default function Header() {
     return (
         <div  className="header">
-           <Card height={240}>
+           <Card shadowed={true} bg={"rgba( 32, 21, 31, 0.88 )"} glassMorphism={true} height={240}>
                <div className="headerTitle">
                     <h1>FEESIBLE</h1>
                     <div className="gascost-container">

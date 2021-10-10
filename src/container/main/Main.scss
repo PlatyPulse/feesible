@@ -11,6 +11,7 @@
 
 .slider-container {
     margin-top: 5%;
+    margin-bottom: 5%;
     p {
         font-size: 1.5rem;
         text-align: center;
@@ -20,6 +21,9 @@
 @media only screen and (max-width: 1250px) {
     .main-container {
         max-width: 900px;
+    }
+    .slider-container{
+        margin-bottom: 10%;
     }
 }
 
