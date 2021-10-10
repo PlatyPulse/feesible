@@ -23,11 +23,11 @@ export default function GasPrice({ gasprice = 55, time = 0.5, type = '', gascost
     }
 
     const selectColor = () => {
-        let perc = Math.min((gasprice) / 2, 100) / 100
+        let perc = Math.min((gasprice - 20) / 2, 100) / 100
         console.log(`perc`, perc)
         //value from 0 to 1
         var hue = ((1 - perc) * 160).toString(10);
-        return ["hsl(", hue, ",100%,50%)"].join("");
+        return ["hsla(", hue, ",100%,50%, 0.6)"].join("");
     }
 
     const colorLeft = selectColor();
@@ -40,7 +40,7 @@ export default function GasPrice({ gasprice = 55, time = 0.5, type = '', gascost
 
     return (
         <div className="gas-price-card">
-            <Card  bg={colors.backgroundcardSecondary} noPadding={true} height={120}>
+            <Card  bg={colors.backgroundcard} noPadding={true} height={120}>
                 <Container >
                     <Row>
                         <Col xs={3} className="bordered-right" style={{ backgroundColor: colorLeft }}>

@@ -20,7 +20,8 @@ export default function Main() {
         2000: '2000',
         3500: '3500',
         6000: '6000',
-        8000: <strong> 8000 Are you that rich ?</strong>
+        8000: <strong> 8000 Are you that rich ?</strong>,
+        10000: '10000'
     };
     return (
         <Container className="main-container">
