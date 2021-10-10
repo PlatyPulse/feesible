@@ -20,7 +20,7 @@ export default function Main() {
         2000: '2000',
         3500: '3500',
         6000: '6000',
-        10000: <strong> 10 000 Are you that rich ?</strong>
+        8000: <strong> 8000 Are you that rich ?</strong>
     };
     return (
         <Container className="main-container">
@@ -32,8 +32,8 @@ export default function Main() {
                     <div className="explanations">
                         Never get surprised by network fees again ! With feesible you can calculate the cost of your fees for most of DEFI's actions !
                     </div>
-                    <div>
-                        <div>Selected Gas : {customGas.customGas}</div>
+                    <div className="slider-container">
+                        <p>Selected Gas : {customGas.customGas}</p>
                         <Slider min={30} max={10000} marks={marks} included={false} onChange={(a) => customGas.setCustomGas(a)} defaultValue={customGas.customGas} />
                     </div>
                     <div>

@@ -9,6 +9,14 @@
     font-size: 1.75rem;
 }
 
+.slider-container {
+    margin-top: 5%;
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
 @media only screen and (max-width: 1250px) {
     .main-container {
         max-width: 900px;
