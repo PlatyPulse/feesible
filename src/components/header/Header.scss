@@ -1,0 +1,30 @@
+.header {
+}
+
+.headerTitle {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+.gascost-container {
+    position: absolute;
+    right: 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .gascost-container {
+        display: none;
+    }
+}

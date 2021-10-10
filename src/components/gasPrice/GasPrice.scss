@@ -1,0 +1,43 @@
+.gasprice-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.gasprice-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+    position: relative;
+    align-items: center;
+}
+
+.bordered-right {
+    border-right: 1px solid #1c6ea4;
+}
+.gas-price-card {
+    padding: 0.5rem;
+    span {
+        text-align: center;
+    }
+    .container {
+        padding-left: 0px;
+        .row {
+            margin-left: 0;
+        }
+        .bordered-right {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .gas-price-card {
+        margin-top: 20px;
+        padding: 0px;
+    }
+}
