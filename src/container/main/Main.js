@@ -20,10 +20,10 @@ export default function Main() {
                     <div>
                         <TxTypeContainer name={"ETH transfer"} gascost={21000}/>
                         <TxTypeContainer name={"ERC20 transfer"} gascost={85000}/>
+                        <TxTypeContainer name={"Approve contract"}  gascost={60000}/>
                         <TxTypeContainer name={"Uniswap Swap"}  gascost={200000}/>
                         <TxTypeContainer name={"Add LP Uniswap"}  gascost={175000}/>
                         <TxTypeContainer name={"Opensea buy now"}  gascost={350000}/>
-                        <TxTypeContainer name={"Approve contract"}  gascost={60000}/>
                     </div>
                 </Row>
             )}

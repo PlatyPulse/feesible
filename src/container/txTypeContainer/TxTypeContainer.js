@@ -20,7 +20,7 @@ export default function TxTypeContainer({ name = 'Title', gascost = 21000 }) {
                             <Col lg={3} md={12} >
                                 <div className="container-title">
                                     <h2>{name}</h2>
-                                    <p>Gas Cost: {gascostFormatted} </p>
+                                    <p>Gas Cost: ~{gascostFormatted} </p>
                                 </div>
                             </Col>
                             <Col>
