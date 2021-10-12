@@ -1,5 +1,4 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
 import GasCostContainer from '../../container/gasCostContainer/GasCostContainer';
 import Card from '../card/Card';
 import './Header.scss'

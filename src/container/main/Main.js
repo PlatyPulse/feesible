@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 import { Container, Row } from 'react-bootstrap'
 import { CustomGasContext, GasContext, UsdContext } from '../../App'
 import Header from '../../components/header/Header'

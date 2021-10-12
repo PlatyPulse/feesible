@@ -2,9 +2,7 @@
 import axios from 'axios';
 
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import './App.scss';
-import Header from './components/header/Header';
 import Main from './container/main/Main';
 
 export const GasContext = React.createContext(null);

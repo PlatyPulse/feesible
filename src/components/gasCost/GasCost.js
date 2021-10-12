@@ -4,7 +4,6 @@ import { GiSnail, GiSpeedometer, GiDrop } from "react-icons/gi";
 import { Col, Row } from 'react-bootstrap';
 
 export default function GasCost({ gas = 96, slow, average, fast }) {
-    const color = 'white'
     return (
         <Row>
             <Col>

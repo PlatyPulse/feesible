@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Card from '../card/Card'
 import './GasPrice.scss'
 import { colors } from '../../colors'
-import { CustomGasContext, UsdContext } from '../../App'
+import { UsdContext } from '../../App'
 
 export default function GasPrice({ gasprice = 55, time = 0.5, type = '', gascost = 21000 }) {
     const usdRate = useContext(UsdContext)
